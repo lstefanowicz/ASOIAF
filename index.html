@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ASOIAF Battle Calculator</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="STYLES/styles.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  </head>
+
+<body class="back">
+
+<nav id="navigation--main">
+        <ul>
+          <li><a href="index.html"class="active">Home</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="links.html">Links</a></li>
+        </ul>
+</nav>
+
+<div class="banner">
+<figure><img src="images/back.jpg" alt="" /><figcaption>ASOIAF Battle Results Calculator</figcaption></figure>
+</div>
+
+
+
+<div class="button">
+<button onclick="myFunction(),panic()">Run</button>
+</div>
+
+<p id="text"></p>
+<p id="panico"></p>
+<p id="wounds"></p>
+
+
+
+<script >    
+function myFunction() {
+  var att = prompt("ENTER: Attack Dice Number");
+  var hit = prompt("ENTER: Hit Chance");
+  var def = prompt("ENTER: Defense Save");
+  var result = (att*hit*def)
+
+  document.getElementById("text").innerHTML = ("Your attack caused "+ result +" wounds!");
+}
+
+
+function panic() {
+  var mor = prompt("ENTER: Morale");
+  var pan = Math.floor((Math.random() * 6) + 1);
+  document.getElementById("panico").innerHTML = "You have lost " + (mor-(pan*2)) + " more men to panic!";
+}
+
+</script>
+
+      <footer>            
+            <ul>
+              <li>
+                <a href="" style="color: blue">
+                  <i class="fab fa-facebook-square fa-2x"></i>
+                </a>
+              </li>
+              <li>
+                <a href="" style="color: aqua">
+                  <i class="fab fa-twitter-square fa-2x"></i>
+                </a>
+              </li>              
+              <li>
+                <a href="" style="color: #f46f30">
+                  <i class="fab fa-instagram fa-2x"></i>
+                </a>
+              </li>
+              <li>
+                <a href="" style="color: red">
+                  <i class="fab fa-youtube-square fa-2x"></i>
+                </a>
+              </li>
+            </ul>
+</footer>
+</body>

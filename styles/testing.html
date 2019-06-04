@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html>
+
+<title>ASOIAF Combat Calculator</title>
+
+<h1></h1>
+
+
+
+
+
+<!-- myFunction(), -->
+
+
+
+<button onclick="myFunction(),panic()">Run</button>
+
+
+
+<p id="text"></p>
+
+<p id="panico"></p>
+
+<p id="wounds"></p>
+
+
+
+<script >    
+
+function myFunction() {
+
+  var att = prompt("ENTER: Attack Dice Number");
+
+  var hit = prompt("Please enter Hit Chance");
+
+  var def = prompt("Please enter Defense Save");
+
+  var result = (att*hit*def)
+
+  
+
+  
+
+  document.getElementById("text").innerHTML = ("Your attack caused "+ result +" wounds");
+
+}
+
+
+
+function panic() {
+
+  var mor = prompt("ENTER: Attack Morale");
+
+  var pan = Math.floor((Math.random() * 6) + 1);
+
+  document.getElementById("panico").innerHTML = "You have lost " + (mor-(pan*2)) + " more men to panic";
+
+  document.getElementById("wounds").innerHTML = pan
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
+</html>
